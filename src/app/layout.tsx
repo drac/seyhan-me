@@ -22,7 +22,7 @@ export default function RootLayout({
         {children}
         <footer>
           <small style={{ color: "#888888" }}>
-            © 2023 All Rights Reserved
+            © 2023 All Rights Reserved. Content on the site is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
           </small>
         </footer>
       </body>
