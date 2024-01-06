@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -38,9 +39,9 @@ export default function PostPreview({ title, date, content, tags, path }: Props)
         <p>
           {content}
         </p>
-        <a href={path}>
+        <Link href={path}>
           More &gt;
-        </a>
+        </Link>
       </section>
       <hr />
     </>
