@@ -4,6 +4,7 @@ type Props = {
   title: string
   date: string
   content: string
+  path: string
   tags?: string[]
 }
 
@@ -17,18 +18,19 @@ type Props = {
  *  title="Example title"
  *  date="16.10.2023"
  *  content="Lorem ipsum dolor sit amet..."
+ *  path="/blog/post/postname"
  *  tags={["tag1", "tag2"]}
  * />
  * ```
  */
-export default function PostPreview({ title, date, content, tags }: Props) {
+export default function PostPreview({ title, date, content, tags, path }: Props) {
   return (
     <>
       <section>
         <h1>{title}</h1>
         <small>
-          {date}
-          {tags?.length && <span style={{ marginLeft: "8px", marginRight: "8px" }}>|</span>}
+          <span style={{ color: "#888888" }}>{date}</span>
+          {tags?.length && <span style={{ marginLeft: "8px", marginRight: "8px", color: "#888888" }}>|</span>}
           {tags?.map((tag, index) => (
             <a key={index} href={`?=${tag}`} style={{ marginRight: "4px" }}>#{tag}</a>
           ))}
@@ -36,7 +38,7 @@ export default function PostPreview({ title, date, content, tags }: Props) {
         <p>
           {content}
         </p>
-        <a href="#">
+        <a href={path}>
           More &gt;
         </a>
       </section>
