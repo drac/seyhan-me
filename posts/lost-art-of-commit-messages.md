@@ -43,8 +43,16 @@ Each commit message should follow this structure:
 2. **Scope** (optional): A short identifier for the component, file, or feature affected.
 3. **Short Description**: A concise summary of the change, ideally up to 50 characters.
 4. **Detailed Points** (optional): Bullet points that provide additional context or details about the changes.
+5. **Footer** (optional): Additional metadata like issue references, co-authors, or breaking changes.
 
-## Allowed Types
+## Guidelines for Each Component
+
+### Type
+
+- **Required**: Select the appropriate type based on the commit's purpose.
+- Use only one of the allowed types.
+
+#### Allowed Types
 
 Choose from the following types for the `<type>` field:
 
@@ -59,13 +67,6 @@ Choose from the following types for the `<type>` field:
 - **ci**: Continuous Integration changes
 - **build**: Changes related to build processes or dependencies
 - **revert**: Reverts a previous commit
-
-## Guidelines for Each Component
-
-### Type
-
-- **Required**: Select the appropriate type based on the commit's purpose.
-- Use only one of the allowed types.
 
 ### Scope (Optional)
 
@@ -104,7 +105,9 @@ Examples:
 
 ### Footer (Optional)
 
-Now, for those who dare to venture beyond the bare minimum, there's the optional **footer** section. This is where you can sprinkle in extra metadata that helps with automation, issue tracking, and keeping your project history as pristine as a freshly refactored codebase.
+You might wonder, "Footers? Isn't that a bit much?" Well, consider this: footers can automate tedious tasks, improve team communication, and make your commit history a beacon of clarity in the chaotic sea of code changes.
+
+Now, the optional **footer** section is where you can sprinkle in extra metadata that helps with automation, issue tracking, and keeping your project history as pristine as a freshly refactored codebase.
 
 Footers are additional lines at the end of your commit message that provide metadata about the commit. They can:
 
@@ -125,8 +128,6 @@ Because why settle for clarity when you can have *extra* clarity? Here are some 
 - **Reviewed-by**: Indicates who reviewed the changes.
 - **Signed-off-by**: A sign-off acknowledging you have the rights to submit the work.
 - **See also**: Points to additional resources or relevant information.
-
-You might wonder, "Footers? Isn't that a bit much?" Well, consider this: footers can automate tedious tasks, improve team communication, and make your commit history a beacon of clarity in the chaotic sea of code changes.
 
 ## Example Commit Messages
 
@@ -188,6 +189,6 @@ See also: https://example.com/setup-guide
 - **Keep It Relevant**: Only include footers that add value or necessary context.
 - **Stay Professional**: This isn't the place for jokes or unnecessary commentary (that's what the code comments are for).
 
-Next time you're tempted to type "fix stuff" as a commit message, remember: we're not monkeys. We're educated, civilized human beings capable of conveying complex ideas with clarity. Let's make sure our commit messages reflect that if not for the sake of our teammates, then at least to prevent our future selves from cursing our past selves.
+Next time you're tempted to type "fix stuff" as a commit message, remember, we're not monkeys. We're educated, civilized human beings capable of conveying complex ideas with clarity. Let's make sure our commit messages reflect that if not for the sake of our teammates, then at least to prevent our future selves from cursing our past selves.
 
 Happy committing!
