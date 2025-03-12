@@ -18,7 +18,7 @@ Crafting a meaningful commit message seems to be a lost art in today's fast-pace
 
 Yes! I said "lost art". Because many developers or let me correct that, many **keyboard virtuosos** apparently don't see the value in leaving a traceable breadcrumb trail of their genius.
 
-### Okay, enough sarcasm; let's learn how to do it right.
+### Okay, let's learn how to do it right.
 
 Commit messages are the narrative of your project's history. They help others (and your future self) understand why changes were made, making collaboration smoother and debugging less of a nightmare.
 
