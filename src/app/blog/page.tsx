@@ -3,7 +3,7 @@ import PostPreview from "@/components/PostPreview";
 export default function Blog() {
   return (
     <section>
-      <PostPreview title="Short or Long Functions? Relax, It Depends" date="27.05.2025" tags={['programming', 'functions', 'SOLID', 'software development']} path="/blog/post/short-or-long" content={`Some folks want every function under five lines. Others write code like it's a bedtime story. The truth? It’s messier and more interesting—than that.`} />
+      <PostPreview title="Short or Long Functions? Relax, It Depends" date="27.05.2025" tags={['programming', 'functions', 'SOLID', 'software development']} path="/blog/post/short-or-long" content={`Some people want every function under five lines. Others write code like it's a bedtime story. The truth? It’s messier and more interesting than that.`} />
 
       <PostPreview title="The Lost Art of Commit Messages" date="10.11.2024" tags={['development', 'version control', 'commit messages', 'git']} path="/blog/post/lost-art-of-commit-messages" content={`People scribbling "fix bug", "update code", or the ever descriptive "refactor" while pushing changes that could rival a novel in length. It's as if they think we're all mind readers or perhaps they assume their code is so flawless it needs no explanation.`} />
 
