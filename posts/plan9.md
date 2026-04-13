@@ -2,6 +2,7 @@
 title: 'Looking to the Past, Seeing the Future: Discovering Plan 9'
 date: '2024-01-06'
 tags: ['technology', 'operating systems', 'innovation']
+description: "Plan 9 from Bell Labs is this really cool, somewhat under-the-radar operating system that started in the late '80s. Imagine a group of tech wizards at Bell Labs, including Ken Thompson (same guy who co-created Unix), brainstorming and then bringing to life a system that's both familiar and wonderfully strange."
 license: 'CC BY-NC-SA 4.0 DEED' # https://creativecommons.org/licenses/by-nc-sa/4.0/
 author: 'Seyhan Dzhamur'
 ---

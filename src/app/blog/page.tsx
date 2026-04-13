@@ -1,13 +1,27 @@
 import PostPreview from "@/components/PostPreview";
+import { getAllPosts } from "./post/[postId]/utils";
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return dateStr;
+  return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" }).format(date);
+}
 
 export default function Blog() {
+  const posts = getAllPosts();
+
   return (
     <section>
-      <PostPreview title="Short or Long Functions? Relax, It Depends" date="27.05.2025" tags={['programming', 'functions', 'SOLID', 'software development']} path="/blog/post/short-or-long" content={`Some people want every function under five lines. Others write code like it's a bedtime story. The truth? It’s messier and more interesting than that.`} />
-
-      <PostPreview title="The Lost Art of Commit Messages" date="10.11.2024" tags={['development', 'version control', 'commit messages', 'git']} path="/blog/post/lost-art-of-commit-messages" content={`People scribbling "fix bug", "update code", or the ever descriptive "refactor" while pushing changes that could rival a novel in length. It's as if they think we're all mind readers or perhaps they assume their code is so flawless it needs no explanation.`} />
-
-      <PostPreview title="Looking to the Past, Seeing the Future: Discovering Plan 9" date="12.12.2023" tags={['technology', 'operatingSystems', 'innovation']} path="/blog/post/plan9" content="Plan 9 from Bell Labs is this really cool, somewhat under-the-radar operating system that started in the late '80s. Imagine a group of tech wizards at Bell Labs, including Ken Thompson (same guy who co-created Unix), brainstorming and then bringing to life a system that's both familiar and wonderfully strange." />
+      {posts.map((post) => (
+        <PostPreview
+          key={post.id}
+          title={post.title}
+          date={formatDate(post.date)}
+          tags={post.tags}
+          path={`/blog/post/${post.id}`}
+          content={post.description}
+        />
+      ))}
     </section>
   )
 }
