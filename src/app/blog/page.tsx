@@ -2,8 +2,9 @@ import PostPreview from "@/components/PostPreview";
 import { getAllPosts } from "./post/[postId]/utils";
 
 function formatDate(dateStr: string): string {
-  const [year, month, day] = dateStr.split('-');
-  return `${day}.${month}.${year}`;
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return dateStr;
+  return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }).format(date);
 }
 
 export default function Blog() {
