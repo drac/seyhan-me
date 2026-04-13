@@ -4,7 +4,7 @@ import { getAllPosts } from "./post/[postId]/utils";
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
   if (isNaN(date.getTime())) return dateStr;
-  return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }).format(date);
+  return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
 export default function Blog() {
