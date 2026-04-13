@@ -46,8 +46,8 @@ export function getAllPosts(): {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
 
-    if (!data.title || !data.date || !data.description) {
-      console.warn(`Skipping post "${fileName}": missing required frontmatter (title, date, or description)`);
+    if (typeof data.title !== 'string' || typeof data.date !== 'string' || typeof data.description !== 'string') {
+      console.warn(`Skipping post "${fileName}": missing or invalid frontmatter (title, date, or description)`);
       return [];
     }
 
@@ -56,7 +56,7 @@ export function getAllPosts(): {
       title: data.title,
       date: data.date,
       description: data.description,
-      tags: data.tags ?? [],
+      tags: Array.isArray(data.tags) ? data.tags : [],
     };
   });
 
