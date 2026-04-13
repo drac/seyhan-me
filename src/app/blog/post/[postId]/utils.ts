@@ -40,20 +40,25 @@ export function getAllPosts(): {
 }[] {
   const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith('.md'));
 
-  const posts = fileNames.map((fileName) => {
+  const posts = fileNames.flatMap((fileName) => {
     const id = fileName.replace(/\.md$/, '');
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
+    const { data } = matter(fileContents);
+
+    if (!data.title || !data.date || !data.description) {
+      console.warn(`Skipping post "${fileName}": missing required frontmatter (title, date, or description)`);
+      return [];
+    }
 
     return {
       id,
-      title: matterResult.data.title,
-      date: matterResult.data.date,
-      description: matterResult.data.description,
-      tags: matterResult.data.tags ?? [],
+      title: data.title,
+      date: data.date,
+      description: data.description,
+      tags: data.tags ?? [],
     };
   });
 
-  return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
