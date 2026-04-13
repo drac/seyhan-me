@@ -33,7 +33,7 @@ export default function PostPreview({ title, date, content, tags, path }: Props)
           <span style={{ color: "#888888" }}>{date}</span>
           {tags?.length && <span style={{ marginLeft: "8px", marginRight: "8px", color: "#888888" }}>|</span>}
           {tags?.map((tag, index) => (
-            <a key={index} href={`?=${tag}`} style={{ marginRight: "4px" }}>#{tag}</a>
+            <a key={index} href={`?tag=${encodeURIComponent(tag)}`} style={{ marginRight: "4px" }}>#{tag}</a>
           ))}
         </small>
         <p>
