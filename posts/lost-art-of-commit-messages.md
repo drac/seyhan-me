@@ -2,6 +2,7 @@
 title: 'The Lost Art of Commit Messages'
 date: '2024-11-10'
 tags: ['development', 'version control', 'commit messages', 'git']
+description: 'People scribbling "fix bug", "update code", or the ever descriptive "refactor" while pushing changes that could rival a novel in length. It''s as if they think we''re all mind readers or perhaps they assume their code is so flawless it needs no explanation.'
 license: 'CC BY-NC-SA 4.0 DEED' # https://creativecommons.org/licenses/by-nc-sa/4.0/
 author: 'Seyhan Dzhamur'
 ---

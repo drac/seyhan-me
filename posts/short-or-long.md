@@ -2,6 +2,7 @@
 title: 'Short or Long Functions? Relax, It Depends'
 date: '2025-05-27'
 tags: ['programming', 'functions', 'SOLID', 'software development']
+description: "Some people want every function under five lines. Others write code like it's a bedtime story. The truth? It's messier and more interesting than that."
 license: 'CC BY-NC-SA 4.0 DEED' # https://creativecommons.org/licenses/by-nc-sa/4.0/
 author: 'Seyhan Dzhamur'
 ---
