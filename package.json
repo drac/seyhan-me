@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "14.0.4",
+    "next": "^14.2.35",
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1"
