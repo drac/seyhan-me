@@ -8,6 +8,12 @@ import { cache } from 'react';
  */
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+export function getReadingTime(content: string): string {
+  const words = content.split(/\s+/).length;
+  const minutes = Math.ceil(words / 200);
+  return `${minutes} min read`;
+}
+
 /**
  * Retrieves the data of a blog post based on its ID.
  * @param id - The ID of the blog post.
@@ -44,6 +50,7 @@ export function getAllPosts(): {
   date: string;
   description: string;
   tags: string[];
+  readingTime: string;
 }[] {
   const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith('.md'));
 
@@ -51,7 +58,7 @@ export function getAllPosts(): {
     const id = fileName.replace(/\.md$/, '');
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data } = matter(fileContents);
+    const { data, content } = matter(fileContents);
 
     if (typeof data.title !== 'string' || typeof data.date !== 'string' || typeof data.description !== 'string') {
       console.warn(`Skipping post "${fileName}": missing or invalid frontmatter (title, date, or description)`);
@@ -64,6 +71,7 @@ export function getAllPosts(): {
       date: data.date,
       description: data.description,
       tags: Array.isArray(data.tags) ? data.tags : [],
+      readingTime: getReadingTime(content),
     };
   });
 

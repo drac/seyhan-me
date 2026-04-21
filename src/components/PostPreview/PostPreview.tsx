@@ -7,6 +7,7 @@ type Props = {
   content: string
   path: string
   tags?: string[]
+  readingTime?: string
 }
 
 /**
@@ -24,13 +25,15 @@ type Props = {
  * />
  * ```
  */
-export default function PostPreview({ title, date, content, tags, path }: Props) {
+export default function PostPreview({ title, date, content, tags, path, readingTime }: Props) {
   return (
     <>
       <section>
         <h1><Link href={path} style={{ color: 'inherit' }}>{title}</Link></h1>
         <small>
           <span style={{ color: "#888888" }}>{date}</span>
+          {readingTime && <span style={{ marginLeft: "8px", marginRight: "8px", color: "#888888" }}>|</span>}
+          {readingTime && <span style={{ color: "#888888" }}>{readingTime}</span>}
           {(tags?.length ?? 0) > 0 && <span style={{ marginLeft: "8px", marginRight: "8px", color: "#888888" }}>|</span>}
           {tags?.map((tag, index) => (
             <Link key={`${tag}-${index}`} href={{ query: { tag } }} style={{ marginRight: "4px" }}>#{tag}</Link>

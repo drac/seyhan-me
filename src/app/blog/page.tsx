@@ -26,6 +26,7 @@ export default function Blog() {
           tags={post.tags}
           path={`/blog/post/${post.id}`}
           content={post.description}
+          readingTime={post.readingTime}
         />
       ))}
     </section>
