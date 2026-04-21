@@ -1,0 +1,13 @@
+/* TEAM */
+
+Name: Seyhan Dzhamur
+Contact: seyhan@dzhamur.com
+Site: https://seyhan.me
+
+/* SITE */
+
+Last update: 2026-04-21
+Language: English
+Standards: HTML5, CSS3
+Software: Next.js, TypeScript, react-markdown, rehype-highlight
+Font: Noto Sans Mono
