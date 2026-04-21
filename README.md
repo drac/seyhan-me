@@ -1,20 +1,25 @@
 # Personal Website
 
+> [seyhan.me](https://seyhan.me)
+
 Welcome to the repository of my personal website. This site is open source, so feel free to explore the code and learn from it.
 
 ## Technology Stack
 
-This website is built using [Next.js](https://nextjs.org/).
+- [Next.js 14](https://nextjs.org/) (App Router) with TypeScript
+- Blog posts written in Markdown, parsed with [gray-matter](https://github.com/jonschlinkert/gray-matter) and rendered with [react-markdown](https://github.com/remarkjs/react-markdown)
+- Syntax highlighting via [rehype-highlight](https://github.com/rehypejs/rehype-highlight)
+- Terminal-inspired styling with [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono)
 
 ## Features
 
-- Blog: A simple blog where I share my thoughts and experiences. Each blog post is a Markdown file in the `posts` directory.
-- About: A page where I share a bit about myself.
-- Contact: A page with my contact information and links to my social media profiles.
+- **Blog**: A simple blog where I share my thoughts and experiences. Each blog post is a Markdown file in the `posts/` directory.
+- **About**: A page where I share a bit about myself.
+- **Contact**: A page with my contact information and links to my social media profiles.
 
 ## Development
 
-To run the website locally, you need to have Node.js and npm installed. Then, you can clone the repository and install the dependencies:
+Requires Node.js 24.x and npm.
 
 ```sh
 git clone https://github.com/drac/seyhan-me.git
@@ -22,13 +27,11 @@ cd seyhan-me
 npm install
 ```
 
-To start the development server, run:
-
 ```sh
-npm run dev
+npm run dev      # start dev server at localhost:3000
+npm run build    # production build
+npm run lint     # ESLint
 ```
-
-The website will be available at `http://localhost:3000`.
 
 ## Contributions
 
