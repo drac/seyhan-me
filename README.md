@@ -2,6 +2,12 @@
 
 > [seyhan.me](https://seyhan.me)
 
+![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-24.x-339933?logo=node.js&logoColor=white)
+![License](https://img.shields.io/github/license/drac/seyhan-me)
+![Content License](https://img.shields.io/badge/Content-CC%20BY--NC--SA%204.0-lightgrey)
+
 Welcome to the repository of my personal website. This site is open source, so feel free to explore the code and learn from it.
 
 ## Technology Stack
