@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     title: 'Seyhan Dzhamur',
     description: 'Personal blog of Seyhan Dzhamur — senior frontend developer based in Varna, Bulgaria.',
   },
+  alternates: {
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
+  },
   authors: [{ name: 'Seyhan Dzhamur', url: 'https://seyhan.me' }],
   other: {
     'theme-color': '#1e1e1e',
