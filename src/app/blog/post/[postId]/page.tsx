@@ -1,5 +1,6 @@
 import { getPostData } from "./utils"
 import ReactMarkdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight';
 import Link from 'next/link';
 
 /**
@@ -15,7 +16,7 @@ export default function Post({ params }: { params: { postId: string } }): JSX.El
   return <section>
     <Link href="/blog" style={{ color: 'var(--secondary-color)', fontSize: '0.85em' }}>← Back to blog</Link>
     <h1 style={{ marginBottom: "32px" }}>{post.title}</h1>
-    <ReactMarkdown>
+    <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
       {post.content}
     </ReactMarkdown>
     <Link href="/blog" style={{ color: 'var(--secondary-color)', fontSize: '0.85em', display: 'inline-block', marginTop: '2em', marginBottom: '2em' }}>← Back to blog</Link>
