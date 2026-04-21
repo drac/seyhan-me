@@ -28,7 +28,7 @@ export default function PostPreview({ title, date, content, tags, path }: Props)
   return (
     <>
       <section>
-        <h1>{title}</h1>
+        <h1><Link href={path} style={{ color: 'inherit' }}>{title}</Link></h1>
         <small>
           <span style={{ color: "#888888" }}>{date}</span>
           {(tags?.length ?? 0) > 0 && <span style={{ marginLeft: "8px", marginRight: "8px", color: "#888888" }}>|</span>}
