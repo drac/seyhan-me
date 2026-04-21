@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import CodeBlock from '@/components/CodeBlock';
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
@@ -68,7 +69,10 @@ export default function Post({ params }: { params: { postId: string } }): JSX.El
         <Link key={`${tag}-${index}`} href={`/blog?tag=${tag}`} style={{ marginRight: '4px' }}>#{tag}</Link>
       ))}
     </small>
-    <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+    <ReactMarkdown
+      rehypePlugins={[rehypeHighlight]}
+      components={{ pre: ({ children }) => <CodeBlock>{children}</CodeBlock> }}
+    >
       {post.content}
     </ReactMarkdown>
     <Link href="/blog" style={{ color: 'var(--secondary-color)', fontSize: '0.85em', display: 'inline-block', marginTop: '2em', marginBottom: '2em' }}>← Back to blog</Link>
