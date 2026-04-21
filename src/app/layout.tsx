@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Noto_Sans_Mono } from 'next/font/google'
 import Navigation from '@/components/Navigation'
+import AnimatedFavicon from '@/components/AnimatedFavicon'
 
 const notoSansFont = Noto_Sans_Mono({ subsets: ['latin-ext'], weight: ["400", "600"] })
 
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={notoSansFont.className} style={{ maxWidth: "720px", margin: "auto" }}>
+        <AnimatedFavicon />
         <Navigation />
         {children}
         <footer>
