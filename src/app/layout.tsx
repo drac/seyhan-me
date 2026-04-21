@@ -6,8 +6,29 @@ import Navigation from '@/components/Navigation'
 const notoSansFont = Noto_Sans_Mono({ subsets: ['latin-ext'], weight: ["400", "600"] })
 
 export const metadata: Metadata = {
-  title: 'Seyhan Dzhamur',
-  description: 'Personal blog of Seyhan Dzhamur',
+  metadataBase: new URL('https://seyhan.me'),
+  title: {
+    default: 'Seyhan Dzhamur',
+    template: '%s | Seyhan Dzhamur',
+  },
+  description: 'Personal blog of Seyhan Dzhamur — senior frontend developer based in Varna, Bulgaria.',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Seyhan Dzhamur',
+    title: 'Seyhan Dzhamur',
+    description: 'Personal blog of Seyhan Dzhamur — senior frontend developer based in Varna, Bulgaria.',
+    url: 'https://seyhan.me',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Seyhan Dzhamur',
+    description: 'Personal blog of Seyhan Dzhamur — senior frontend developer based in Varna, Bulgaria.',
+  },
+  authors: [{ name: 'Seyhan Dzhamur', url: 'https://seyhan.me' }],
+  other: {
+    'theme-color': '#1e1e1e',
+  },
 }
 
 export default function RootLayout({

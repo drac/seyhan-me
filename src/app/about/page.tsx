@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'About Seyhan Dzhamur — senior front-end developer based in Varna, Bulgaria with over a decade of experience in React, UI/UX, and web development.',
+}
+
 export default function AboutMe() {
   return (
     <section>

@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Seyhan Dzhamur via GitHub, LinkedIn, or email.',
+}
+
 export default function Contact() {
   return (
     <section>

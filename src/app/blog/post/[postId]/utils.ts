@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { cache } from 'react';
 
 /**
  * The directory path where the blog posts are stored.
@@ -12,10 +13,13 @@ const postsDirectory = path.join(process.cwd(), 'posts');
  * @param id - The ID of the blog post.
  * @returns An object containing the ID, title, date, and content of the blog post.
  */
-export function getPostData(id: string): {
+export const getPostData = cache(function getPostData(id: string): {
   id: string;
   title: string;
   date: string;
+  description: string;
+  tags: string[];
+  author: string;
   content: string;
 } {
   const fullPath = path.join(postsDirectory, `${id}.md`);
@@ -27,9 +31,12 @@ export function getPostData(id: string): {
     id,
     title: matterResult.data.title,
     date: matterResult.data.date,
+    description: matterResult.data.description ?? '',
+    tags: Array.isArray(matterResult.data.tags) ? matterResult.data.tags : [],
+    author: matterResult.data.author ?? 'Seyhan Dzhamur',
     content: matterResult.content,
   };
-}
+})
 
 export function getAllPosts(): {
   id: string;

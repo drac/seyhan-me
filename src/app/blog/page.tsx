@@ -1,5 +1,11 @@
 import PostPreview from "@/components/PostPreview";
 import { getAllPosts } from "./post/[postId]/utils";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'Articles on frontend development, version control, and software engineering by Seyhan Dzhamur.',
+}
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
