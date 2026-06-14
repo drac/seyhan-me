@@ -52,7 +52,7 @@ export function getAllPosts(): {
   tags: string[];
   readingTime: string;
 }[] {
-  const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith('.md'));
+  const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith('.md') && f !== 'README.md');
 
   const posts = fileNames.flatMap((fileName) => {
     const id = fileName.replace(/\.md$/, '');
