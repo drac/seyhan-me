@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Seyhan Dzhamur via GitHub, LinkedIn, or email.',
+  description: 'Get in touch with Seyhan Dzhamur via GitHub or LinkedIn.',
 }
 
 export default function Contact() {
@@ -12,7 +12,6 @@ export default function Contact() {
       <ul>
         <li><a href="https://github.com/drac">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/seyhandzhamur/">LinkedIn</a></li>
-        <li><a href="mailto:contact@seyhan.me">contact@seyhan.me</a></li>
       </ul>
     </section>
   )
