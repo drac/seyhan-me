@@ -1,7 +1,7 @@
 ---
 title: 'HTML Already Did That'
 date: '2026-04-21'
-tags: ['html', 'web development', 'frontend']
+tags: ['web development', 'html', 'best practices']
 description: 'We keep installing packages and writing JavaScript to build modals, accordions, and dropdowns. Meanwhile, HTML has been sitting there with native solutions for years, wondering when we would notice.'
 license: 'CC BY-NC-SA 4.0 DEED' # https://creativecommons.org/licenses/by-nc-sa/4.0/
 author: 'Seyhan Dzhamur'

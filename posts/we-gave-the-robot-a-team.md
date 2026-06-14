@@ -1,7 +1,7 @@
 ---
 title: 'We Gave the Robot a Team'
 date: '2026-06-14'
-tags: ['ai', 'agents', 'llm', 'developer tools']
+tags: ['ai', 'agents', 'developer tools']
 description: "We were told to put AI in everything. Now the invoice has arrived, and it turns out giving one robot a team of robots adds up fast. Here's how I'm trying to stop paying flagship rates to move bricks."
 license: 'CC BY-NC-SA 4.0 DEED' # https://creativecommons.org/licenses/by-nc-sa/4.0/
 author: 'Seyhan Dzhamur'
