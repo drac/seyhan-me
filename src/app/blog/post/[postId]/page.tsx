@@ -58,7 +58,7 @@ export default function Post({ params }: { params: { postId: string } }): JSX.El
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
-    <Link href="/blog" style={{ color: 'var(--secondary-color)', fontSize: '0.85em' }}>← Back to blog</Link>
+    <Link href="/" style={{ color: 'var(--secondary-color)', fontSize: '0.85em' }}>← Back to blog</Link>
     <h1 style={{ marginBottom: "8px" }}>{post.title}</h1>
     <small style={{ display: 'block', marginBottom: '32px' }}>
       <span style={{ color: '#888888' }}>{formatDate(post.date)}</span>
@@ -66,7 +66,7 @@ export default function Post({ params }: { params: { postId: string } }): JSX.El
       <span style={{ color: '#888888' }}>{getReadingTime(post.content)}</span>
       {post.tags.length > 0 && <span style={{ marginLeft: '8px', marginRight: '8px', color: '#888888' }}>|</span>}
       {post.tags.map((tag, index) => (
-        <Link key={`${tag}-${index}`} href={`/blog?tag=${tag}`} style={{ marginRight: '4px' }}>#{tag}</Link>
+        <Link key={`${tag}-${index}`} href={`/?tag=${tag}`} style={{ marginRight: '4px' }}>#{tag}</Link>
       ))}
     </small>
     <ReactMarkdown
@@ -75,6 +75,6 @@ export default function Post({ params }: { params: { postId: string } }): JSX.El
     >
       {post.content}
     </ReactMarkdown>
-    <Link href="/blog" style={{ color: 'var(--secondary-color)', fontSize: '0.85em', display: 'inline-block', marginTop: '2em', marginBottom: '2em' }}>← Back to blog</Link>
+    <Link href="/" style={{ color: 'var(--secondary-color)', fontSize: '0.85em', display: 'inline-block', marginTop: '2em', marginBottom: '2em' }}>← Back to blog</Link>
   </section>
 }

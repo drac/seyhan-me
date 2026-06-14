@@ -19,12 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: 'https://seyhan.me/blog',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
       url: 'https://seyhan.me/about',
       changeFrequency: 'monthly',
       priority: 0.5,
